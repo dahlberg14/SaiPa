@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaiPa Bingo – För Långfärd och Legender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Startanimation -->
+  <div id="start-animation">
+    <img src="bilder/saipa-logo.jpeg" alt="SaiPa logotyp" class="start-logo">
+    <h1 class="start-text">För Långfärd och Legender</h1>
+  </div>
+
+  <!-- Navigationsmeny -->
+  <nav>
+    <button class="tab-btn" data-tab="start">Start</button>
+    <button class="tab-btn" data-tab="regler">Regler</button>
+    <button class="tab-btn" data-tab="motstand">Motståndarkollen</button>
+    <button class="tab-btn" data-tab="bingo">Bingo</button>
+    <button class="tab-btn" data-tab="korsord">Korsord</button>
+    <button class="tab-btn" data-tab="pub">Pubutmaningar</button>
+    <button class="tab-btn" data-tab="stader">Städer & Arenor</button>
+  </nav>
+
+  <!-- Innehåll -->
+  <main>
+    <!-- Start -->
+    <section id="start" class="tab-content active">
+      <h1>SaiPa Bingo – För Långfärd och Legender</h1>
+      <img src="bilder/saipa-logo.jpeg" alt="SaiPa logotyp" class="logo">
+      <p>Ett gul-svart äventyr för hockeyälskare på vägarna!</p>
+      <button onclick="openTab('bingo')">Börja spela!</button>
+    </section>
+
+    <!-- Regler -->
+    <section id="regler" class="tab-content">
+      <h2>Så här gör ni</h2>
+      <ul>
+        <li>Gör bingobrickor med saker att hitta under resan</li>
+        <li>Första som får en rad ropar "Saimaan Pallo!"</li>
+        <li>För extra utmaning – spela med pubutmaningar 🍻</li>
+      </ul>
+    </section>
+
+    <!-- Motståndarkollen -->
+    <section id="motstand" class="tab-content">
+      <h2>Motståndarkollen</h2>
+      <div class="team">
+        <img src="bilder/tappara-logo.jpeg" alt="Tappara logotyp">
+        <p><strong>Tappara (Tammerfors)</strong><br>Blå-orange stolthet från hjärtat av finsk hockey.</p>
+      </div>
+      <div class="team">
+        <img src="bilder/kiekko-espoo-logo.jpeg" alt="K-Espoo logotyp">
+        <p><strong>Kiekko-Espoo</strong><br>Framtidens lag från Esbo, alltid redo för kamp på isen!</p>
+      </div>
+    </section>
+
+    <!-- Bingo -->
+    <section id="bingo" class="tab-content">
+      <h2>SaiPa Bingo</h2>
+      <div id="bingo-board" class="bingo-board"></div>
+      <button onclick="resetBingo()">Nollställ bricka</button>
+      <p id="bingo-message"></p>
+    </section>
+
+    <!-- Korsord -->
+    <section id="korsord" class="tab-content">
+      <h2>Isens Hjältar</h2>
+      <div id="crossword"></div>
+      <button onclick="toggleFacit()">Visa/Dölj facit</button>
+      <div id="facit" class="facit">FACIT: (Uppochned)  
+        <div style="transform: rotate(180deg);">SAIPA<br>PUKKI<br>LARMI</div>
+      </div>
+    </section>
+
+    <!-- Pubutmaningar -->
+    <section id="pub" class="tab-content">
+      <h2>Pubutmaningar 🍺</h2>
+      <p id="challenge">Tryck på knappen för en ny utmaning!</p>
+      <button onclick="newChallenge()">Slumpa nästa!</button>
+    </section>
+
+    <!-- Städer & Arenor -->
+    <section id="stader" class="tab-content">
+      <h2>Städer & Arenor</h2>
+      <div class="city">
+        <h3>Villmanstrand (Lappeenranta)</h3>
+        <p>Hemstaden för SaiPa – belägen vid sjön Saimen, full av hockeyhistoria!</p>
+        <p><strong>Kisapuisto Arena:</strong> Klassisk hockeykatedral med äkta stämning sedan 1972.</p>
+      </div>
+      <div class="city">
+        <h3>Tammerfors (Tampere)</h3>
+        <p>Hockeyns hjärta i Finland – hem för Tappara och Ilves.</p>
+        <p><strong>Nokia Arena:</strong> Modern hockeyarena och värd för VM – en upplevelse för alla fans!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="bilder/saipa-logo.jpeg" alt="SaiPa logotyp" class="footer-logo">
+    <p>© SaiPa Bingo – För Långfärd och Legender</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
