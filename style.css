@@ -1,0 +1,100 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+nav {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  background: #f4d000;
+  border: 1px solid black;
+  margin: 4px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.tab-btn:hover {
+  background: #ffe74c;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.logo, .footer-logo {
+  width: 120px;
+  margin: 10px auto;
+}
+
+.team img {
+  width: 100px;
+  margin: 10px;
+}
+
+.bingo-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.bingo-cell {
+  border: 1px solid black;
+  padding: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bingo-cell.active {
+  background: #f4d000;
+}
+
+.facit {
+  margin-top: 15px;
+  display: none;
+}
+
+.start-logo {
+  width: 160px;
+  animation: spinIn 2s ease;
+}
+
+.start-text {
+  animation: fadeIn 2s ease;
+}
+
+#start-animation {
+  background: white;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+@keyframes spinIn {
+  from { transform: rotate(-360deg) scale(0); opacity: 0; }
+  to { transform: rotate(0deg) scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
